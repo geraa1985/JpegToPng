@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JpegToPng</string>
+    <string name="button_text">Open jpeg</string>
 </resources>
