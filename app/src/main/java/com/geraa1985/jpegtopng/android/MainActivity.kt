@@ -46,6 +46,8 @@ class MainActivity : MvpAppCompatActivity(), MainView, View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ActivityCompat.requestPermissions(this, permissions, PERMISSIONS_CODE)
         binding.btnOpen.setOnClickListener(this)
     }
 
@@ -130,6 +132,5 @@ class MainActivity : MvpAppCompatActivity(), MainView, View.OnClickListener {
             requestCode, grantResults, PackageManager.PERMISSION_GRANTED,
             PERMISSIONS_CODE, permissions.size
         )
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }
